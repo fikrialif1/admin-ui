@@ -41,7 +41,6 @@ function App() {
             <div className="p-4 bg-red-100 flex flex-col justify-between h-full">
               <h3 className="text-lg font-semibold mb-4">{course.title}</h3>
 
-              <div className="bg-red-50 p-2 rounded-lg">detail</div>
 							<div className="bg-red-50 p-2 rounded-lg">
                 <div className="text-sm text-gray-500 mt-2 flex justify-between">
                   <span>👥 123 users</span>
