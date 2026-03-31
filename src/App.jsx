@@ -17,7 +17,7 @@ function App() {
           <img src={reactLogo} 
           className="w-24 h-24 animate-spin" 
           alt="React logo" 
-          style={{animationDirection: '10s'}}
+          style={{animationDuration: '10s'}}
           />
         </a>
       </div>
