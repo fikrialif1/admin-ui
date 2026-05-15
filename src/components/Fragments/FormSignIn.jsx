@@ -1,6 +1,6 @@
 import React from "react";
 import LabeledInput from "../Elements/LabeledInput";
-import Checkbox from "../Elements/Checkbox";
+import CheckBox from "../Elements/CheckBox";
 import Button from "../Elements/Button";
 
 const FormSignIn = () => {
@@ -30,7 +30,7 @@ const FormSignIn = () => {
             />
           </div>
           <div className="mb-3">
-            <Checkbox
+            <CheckBox
               label="Keep me signed in"
               id="status"
               type="checkbox"

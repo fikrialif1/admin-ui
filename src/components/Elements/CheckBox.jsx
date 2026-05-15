@@ -1,6 +1,6 @@
 import React from "react";
 
-const Checkbox = (props) => {
+const CheckBox = (props) => {
   const { label, id, ...rest } = props;
   return (
     <>
@@ -12,4 +12,4 @@ const Checkbox = (props) => {
   );
 };
 
-export default Checkbox;
+export default CheckBox;
