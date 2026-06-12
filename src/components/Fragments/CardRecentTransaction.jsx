@@ -19,6 +19,7 @@ function CardRecentTransaction(props) {
             <div className="mb-4">
               {tabs.map((tab) => (
                 <button
+                  key={tab}
                   	className={
                     active == tab
                       ? "px-4 font-bold text-primary border-b-4 border-primary"

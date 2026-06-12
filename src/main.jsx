@@ -4,13 +4,16 @@ import './index.css'
 import App from './App.jsx'
 import Form from "./latihan/Form.jsx";
 import { ThemeContextProvider } from "./context/themeContext.jsx";
+import { AuthContextProvider } from "./context/authContext.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeContextProvider>
-      <App />
-      {/* <Form /> */}
-    </ThemeContextProvider>
+    <AuthContextProvider>
+      <ThemeContextProvider>
+        <App />
+        {/* <Form /> */}
+      </ThemeContextProvider>
+    </AuthContextProvider>
   </StrictMode>,
 );
 
