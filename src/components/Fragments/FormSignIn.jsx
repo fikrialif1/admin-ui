@@ -72,7 +72,7 @@ function FormSignIn({ onSubmit }) {
                       id="password"
                       type="password"
                       label="Password"
-                      placeholder="●●●●●●●●●●●●●●"
+                      placeholder="*************"
                     />
                   )}
                 </Field> 
