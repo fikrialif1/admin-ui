@@ -5,7 +5,7 @@ import { loginService } from '../services/authService'
 import { AuthContext } from '../context/authContext'
 import AppSnackbar from '../components/Elements/AppSnackbar'
 
-function SignIn() {
+const SignIn = () => {
   const { login } = useContext(AuthContext);
 
   const [snackbar, setSnackbar] = useState({
@@ -43,5 +43,6 @@ function SignIn() {
     </>
   );
 }
+
 
 export default SignIn;

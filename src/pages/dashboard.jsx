@@ -18,9 +18,11 @@ import {
 import { goalService } from '../services/dataService';
 import { AuthContext } from '../context/authContext';
 import AppSnackbar from '../components/Elements/AppSnackbar';
+import { billsService } from '../services/dataService';
 
 function dashboard() {
   const [goals, setGoals] = useState({});
+  const [bills, setBills] = useState([]);
   const { logout } = useContext(AuthContext);
 
   const [snackbar, setSnackbar] = useState({
@@ -49,8 +51,26 @@ function dashboard() {
     }
   };
 
+  const fetchBills = async () => {
+    try {
+      const data = await billsService();
+      setBills(data);
+    } catch (err) {
+      console.error("Gagal mengambil data bills:", err);
+      setSnackbar({
+        open: true,
+        message: err.msg || "Gagal mengambil data dari server",
+        severity: "error",
+      });
+      if (err.status === 401) {
+        logout();
+      }
+    }
+  };
+
   useEffect(() => {
     fetchGoals();
+    fetchBills();
   }, []);
   
   

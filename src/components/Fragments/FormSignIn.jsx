@@ -6,25 +6,20 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import DarkModeToggle from "../Elements/DarkModeToggle";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const SignInSchema = Yup.object().shape({
   email: Yup.string().email("Email tidak valid").required("Email wajib diisi"),
   password: Yup.string().required("Password wajib diisi"),
 });
 
-function FormSignIn({ onSubmit }) {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   onSubmit(email, password);
-  // };
-
+const FormSignIn = ({ onSubmit }) => {
   return (
     <>
       {/* form start */}
-      <div className="mt-16">
+      <div className="mt-16 ">
 
         <Formik
           initialValues={{
@@ -108,8 +103,8 @@ function FormSignIn({ onSubmit }) {
       {/* form end */}
       {/* teks start */}
       <div className="my-9 px-7 flex flex-col justify-center items-center text-xs text-gray-03">
-        <div className="border border-gray-05 w-full"></div>
-        <div className="px-2 bg-special-mainBg absolute"> or sign in with</div>
+        <div className="border border-gray-05 w-full dark:bg-dark-bg"></div>
+        <div className="px-2 bg-special-mainBg absolute dark:bg-dark-bg dark:text-white"> or sign in with</div>
       </div>
       {/* teks end */}
       {/* sign in with google start */}
@@ -152,6 +147,7 @@ function FormSignIn({ onSubmit }) {
         <Link to="/register" className="text-primary text-sm font-bold">
           Create an account
         </Link>
+
       </div>
       {/* link end */}
       {/* sign in with google start */}
@@ -160,6 +156,9 @@ function FormSignIn({ onSubmit }) {
       {/* link start */}
       <div></div>
       {/* link end */}
+      <div className="flex justify-center mt-10">
+        <DarkModeToggle />
+      </div>
     </>
   );
 };

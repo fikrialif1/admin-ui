@@ -22,7 +22,7 @@ function CardBalance(props) {
 	                </div>
 	              </div>
 	              <div className="border-b-1 border-gray-05 my-4"></div>
-	              <div className="flex justify-between bg-primary text-white p-4 rounded-md">
+	              <div className="flex justify-between bg-primary text-white dark:text-dark-bg p-4 rounded-md">
 	                <div>
 	                  Account Type
 	                  <br />
@@ -36,7 +36,7 @@ function CardBalance(props) {
 	                    <span className="text-xl font-bold me-2">
 	                      ${item.balance}
 	                    </span>
-	                    <div className="bg-white text-primary rounded-full">
+	                    <div className="bg-white text-primary dark:bg-dark-bg rounded-full">
 	                      <Icon.ArrowUpRight width={18} height={18} />
 	                    </div>
 	                  </div>
