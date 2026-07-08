@@ -7,7 +7,7 @@ import Icon from "../Elements/Icon";
 import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../../context/themeContext";
 import { AuthContext } from "../../context/authContext";
-import { DarkModeContext } from "../../context/darkModeContext";
+import { DarkModeContext } from "../../context/DarkModeContext";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 import DarkModeToggle from "../Elements/DarkModeToggle";
